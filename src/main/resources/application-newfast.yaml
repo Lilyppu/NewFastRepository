@@ -4,8 +4,8 @@ spring:
       maximumPoolSize: 1
     driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@10.10.2.97:1521:harli2
-    username: ordmgmt
-    password: devordmgmt
+    username: fifapps
+    password: devfifapps
   jpa:    
     generate-ddl: true
     hibernate:
