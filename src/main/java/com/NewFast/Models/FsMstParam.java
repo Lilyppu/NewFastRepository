@@ -31,7 +31,7 @@ public class FsMstParam {
 	@Column(name="KEY", length=100)
 	private String fmprKey;
 	
-	
+	@Id
 	@Column(name="VALUE", length=1000)
 	private String fmprValue;
 	

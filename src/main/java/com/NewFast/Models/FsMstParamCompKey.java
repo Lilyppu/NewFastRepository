@@ -18,4 +18,6 @@ public class FsMstParamCompKey implements Serializable{
 	private Integer fmprModuleId;
 	
 	private String fmprKey;
+	
+	private String fmprValue;
 }
