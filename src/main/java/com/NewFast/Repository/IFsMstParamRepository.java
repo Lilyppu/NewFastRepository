@@ -1,5 +1,6 @@
 package com.NewFast.Repository;
 
+
 import java.util.List;
 
 import java.util.Optional;
@@ -9,11 +10,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
-import com.NewFast.Models.FsMstCompany;
+import com.NewFast.Models.FsMstParam;
+import com.NewFast.Models.FsMstParamCompKey;
 
 
-public interface IFsMstCompanyRepository extends JpaRepository<FsMstCompany, String>{
+
+public interface IFsMstParamRepository extends JpaRepository<FsMstParam, FsMstParamCompKey>{
 	
-	public Optional<FsMstCompany> findByFmcoCoyId (String coyid);
+	public List<FsMstParam> findByFmprKeyContaining (String Key);
 
 }

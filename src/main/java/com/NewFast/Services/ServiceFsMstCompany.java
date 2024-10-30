@@ -15,7 +15,7 @@ public class ServiceFsMstCompany {
 	@Autowired
 	IFsMstCompanyRepository repoFMCO;
 	
-	public List<FsMstCompany> getCompanySingle (String coyid){
+	public Optional<FsMstCompany> getCompanySingle (String coyid){
 		return repoFMCO.findByFmcoCoyId(coyid);
 	}
 

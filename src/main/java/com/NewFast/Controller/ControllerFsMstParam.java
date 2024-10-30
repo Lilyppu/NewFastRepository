@@ -9,16 +9,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.NewFast.Models.FsMstCompany;
-import com.NewFast.Services.ServiceFsMstCompany;
+import com.NewFast.Models.FsMstParam;
+import com.NewFast.Services.ServiceFsMstParam;
+
 
 @RestController
-public class ControllerFsMstCompany {
+public class ControllerFsMstParam {
 	@Autowired
-	ServiceFsMstCompany servFMCO;
+	ServiceFsMstParam ServFMPRM;
 	
-	@GetMapping("/company/getFmcoSingle")
-	public Optional<FsMstCompany> getCompanySingle (String coyid){
-		return servFMCO.getCompanySingle(coyid);
+	@GetMapping("/params/getParamByKey")
+	public List<FsMstParam> getParamByKey(String keyin){
+		//System.out.println("aaaa :"+keyin);
+		return ServFMPRM.getParamByKey(keyin);
 	}
+	
+	
+
 }
