@@ -1,5 +1,4 @@
 package com.NewFast.Repository;
-
 import java.util.List;
 
 import java.util.Optional;
@@ -10,9 +9,8 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.NewFast.Models.FsMstCompany;
+import com.NewFast.Models.FsMstOffices;
 
-public interface IFsMstCompanyRepository extends JpaRepository<FsMstCompany, String>{
-	
-	public Optional<FsMstCompany> findByFmcoCoyId (String coyid);
+public interface IFsMstOfficesRepository extends JpaRepository<FsMstOffices,String>{
 
 }
