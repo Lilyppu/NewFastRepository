@@ -18,9 +18,15 @@ public class ControllerFsMstOffices {
 	@Autowired
 	ServiceFsMstOffices servFMOFF;
 	
-	@GetMapping("/company/getFmofList")
+	@GetMapping("/ofice/getFmofList")
 	public List<FsMstOffices> getFmOffList(){
 		return servFMOFF.getFmOffList();
 	}
+	
+	@GetMapping("/ofice/getFmofSingle")
+	public Optional<FsMstOffices> getOfficeName(String off){
+		return servFMOFF.getOfficeName(off);
+	}
+	
 
 }

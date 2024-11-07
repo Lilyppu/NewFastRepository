@@ -17,5 +17,9 @@ public class ServiceFsMstOffices {
 		return repoFMOFF.findAll();
 	}
 	
+	public Optional<FsMstOffices> getOfficeName(String off){
+		return repoFMOFF.findByFmofCode(off);
+	}
+	
 	
 }

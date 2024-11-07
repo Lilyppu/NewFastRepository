@@ -12,5 +12,7 @@ import com.NewFast.Models.FsMstCompany;
 import com.NewFast.Models.FsMstOffices;
 
 public interface IFsMstOfficesRepository extends JpaRepository<FsMstOffices,String>{
+	
+	public Optional<FsMstOffices> findByFmofCode(String off);
 
 }
