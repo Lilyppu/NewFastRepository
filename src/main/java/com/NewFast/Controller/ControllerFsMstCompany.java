@@ -17,6 +17,11 @@ public class ControllerFsMstCompany {
 	@Autowired
 	ServiceFsMstCompany servFMCO;
 	
+	@GetMapping("/company/getFmcoList")
+	public List<FsMstCompany> getCompanyList (){
+		return servFMCO.getCompanyList();
+	}
+	
 	@GetMapping("/company/getFmcoSingle")
 	public Optional<FsMstCompany> getCompanySingle (String coyid){
 		return servFMCO.getCompanySingle(coyid);

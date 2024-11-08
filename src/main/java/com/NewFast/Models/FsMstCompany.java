@@ -61,8 +61,4 @@ public class FsMstCompany {
 	@Column(name="UPDATE_DATE")
 	private Date fmcoUpdateDate;
 
-	        
-	  
-
-
 }
