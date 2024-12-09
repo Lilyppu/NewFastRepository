@@ -18,8 +18,18 @@ public class ControllerFsUtlJobSchedules {
 	@Autowired
 	ServiceFsUtlJobSchedules servFujs;
 	
-	@GetMapping("/jf/getFsUtlJobScheduleList")
+	@GetMapping("/fujs/getFsUtlJobScheduleList")
 	public List<FsUtlJobSchedules> getFujsAll  (String Status, Integer ModId){
 		return servFujs.getFujsAll(Status, ModId);
+	}
+	
+	@GetMapping("/fujs/getFsUtlJobScheduleSingle")
+	public Optional<FsUtlJobSchedules> getFujsSingle  (String Name){
+		return servFujs.getFujsSingle(Name);
+	}
+	
+	@GetMapping("/fujs/getFsUtlJobScheduleFilter")
+	public  List<FsUtlJobSchedules> getFujsFilter(String ptype, String pstatus, String pdate){
+		return servFujs.getFujsFilter(ptype, pstatus, pdate);
 	}
 }

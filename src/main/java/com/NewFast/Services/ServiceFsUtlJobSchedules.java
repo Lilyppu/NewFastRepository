@@ -15,7 +15,14 @@ public class ServiceFsUtlJobSchedules {
 	IFsUtlJobSchedulesRepository repoFujs;
 	
 	public List<FsUtlJobSchedules> getFujsAll  (String Status, Integer ModId){
-		return repoFujs.findBYFujsStatusFlagAndFujsModuleId(Status, ModId);
+		return repoFujs.findByFujsStatusFlagAndFujsModuleId(Status, ModId);
 	}
 	
+	public Optional<FsUtlJobSchedules> getFujsSingle  (String Name){
+		return repoFujs.findByFujsName(Name);
+	}
+	
+	public  List<FsUtlJobSchedules> getFujsFilter(String ptype, String pstatus, String pdate){
+		return repoFujs.getFujsFilter(ptype, pstatus, pdate);
+	}
 }
