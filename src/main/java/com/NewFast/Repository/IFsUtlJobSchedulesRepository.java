@@ -26,4 +26,5 @@ public interface IFsUtlJobSchedulesRepository extends JpaRepository<FsUtlJobSche
 			+ "AND TO_CHAR(CREATED_TIMESTAMP,'DD/MM/YYYY') LIKE '%'||:PDATE||'%' ", nativeQuery = true )
     List<FsUtlJobSchedules> getFujsFilter(String PTYPE, String PSTATUS, String PDATE);
 
+
 }
